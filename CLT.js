@@ -175,11 +175,8 @@ function updateHistogramCoins(trials) {
 // Generate single trial and append to list of trials
 function singleTrialDice() {
     
-    console.log("Here");
-
 	// Get number of dice
 	var numDice = $('#number_of_dice').val();
-	console.log(numDice);
 
 	if (numDice < 1) {
 		alert('Number of dice must be at least 1.');
@@ -221,16 +218,6 @@ function singleTrialDice() {
 	$('#histogram_pane_dice').append('<p style="margin-top:25px">The mean is ' + meanString + '</p>');
 	$('#histogram_pane_dice').append('<p>= ' + sum + ' / ' + numDice + '</p>');
 	$('#histogram_pane_dice').append('<p>= ' + mean + '</p>')
-
-
-	/***
-	// Display calculation string to results pane
-	$('#histogram_pane').append('<table style = "margin-top: 25px">');
-	$('#histogram_pane').append('<tr>');
-	$('#histogram_pane').append('<td>Mean:</td> <td style="padding-left:10px">' + meanString + '</td>');
-	$('#histogram_pane').append('</tr>');
-	$('#histogram_pane').append('</table>');
-	***/
 }
 
 
@@ -253,7 +240,7 @@ function singleTrialCoins() {
 	// Generate single random trial
 	var flips = [];
 	var sum = 0;
-    var prob_of_heads = $('#prob_of_heads').val();
+        var prob_of_heads = $('#prob_of_heads').val();
 	for (var i = 0; i < numCoins; i++) {
         var r = Math.random();
         var d = 0;
@@ -261,12 +248,8 @@ function singleTrialCoins() {
             d = 1;   
         }
         flips.push(d);
-		sum += d;
+        sum += d;
 
-		// Append the image corresponding to the value of d to
-		// the results pane
-		//var filename = 'die' + d + '.png';
-		//var htmlString = '<img src="' + filename + '" width="75px"/img>';
         var htmlString = 'T ';
         if (d == 1) {
             htmlString = 'H ';   
@@ -288,16 +271,6 @@ function singleTrialCoins() {
 	$('#histogram_pane_coins').append('<p style="margin-top:25px">The fration of heads is ' + meanString + '</p>');
 	$('#histogram_pane_coins').append('<p>= ' + sum + ' / ' + numCoins + '</p>');
 	$('#histogram_pane_coins').append('<p>= ' + mean + '</p>')
-
-
-	/***
-	// Display calculation string to results pane
-	$('#histogram_pane').append('<table style = "margin-top: 25px">');
-	$('#histogram_pane').append('<tr>');
-	$('#histogram_pane').append('<td>Mean:</td> <td style="padding-left:10px">' + meanString + '</td>');
-	$('#histogram_pane').append('</tr>');
-	$('#histogram_pane').append('</table>');
-	***/
 }
 
 // Generate multiple trials
