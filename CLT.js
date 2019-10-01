@@ -280,14 +280,14 @@ function multipleTrialsDice() {
 
 	// Get number of dice and number of trials
 	var numDice = $('#number_of_dice').val();
-	console.log(numDice);
+
 	if (numDice < 1) {
 		alert('Number of dice must be at least 1.');
 		return;
 	}
 
 	var numTrials = $('#number_of_trials_dice').val();
-	console.log(numTrials);
+
 	if (numTrials < 1) {
 		alert('Number of trials must be at least 1.');
 		return;
@@ -345,14 +345,14 @@ function multipleTrialsCoins() {
 
 	// Get number of dice and number of trials
 	var numCoins = $('#number_of_coins').val();
-	console.log(numCoins);
+
 	if (numCoins < 1) {
 		alert('Number of coins must be at least 1.');
 		return;
 	}
 
 	var numTrials = $('#number_of_trials_coins').val();
-	console.log(numTrials);
+
 	if (numTrials < 1) {
 		alert('Number of trials must be at least 1.');
 		return;
