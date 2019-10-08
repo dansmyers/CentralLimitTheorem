@@ -268,7 +268,7 @@ function singleTrialCoins() {
 	meanString += ') / ' + numCoins;
 
 
-	$('#histogram_pane_coins').append('<p style="margin-top:25px">The fration of heads is ' + meanString + '</p>');
+	$('#histogram_pane_coins').append('<p style="margin-top:25px">The fraction of heads is ' + meanString + '</p>');
 	$('#histogram_pane_coins').append('<p>= ' + sum + ' / ' + numCoins + '</p>');
 	$('#histogram_pane_coins').append('<p>= ' + mean + '</p>')
 }
